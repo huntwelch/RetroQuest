@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+        <link rel='stylesheet' type='text/css' href='css/fonts.css' />
+        <link rel='stylesheet' type='text/css' href='css/main.css' />
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script src='js/hammer.min.js'></script>
+    </head>
+
+    <body style="height: 101%">
+        <div id="controls">
+            <button id="help">Help</button>
+        </div>
+        <div id="wrapper">
+            <canvas id="gameCanvas" width="150" height="150">A game.</canvas>
+            <input id="command" type="text" value="" disabled>
+        </div> 
+        <div id="textwrapper"></div>
+        <script type='module' src='js/engine.js'></script>
+        <script>
+            document.ontouchmove = function(event){
+                event.preventDefault();
+            }
+        </script>
+    </body>
+</html>
